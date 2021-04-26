@@ -3,12 +3,22 @@ const app = express();
 const axios = require("axios");
 
 async function massage(types, callback) {
-  var typeUrl = [];
-  await types.forEach(type => {
-    typeUrl.push(type.type.url);
-    console.log(type.type.url)
-  });
-  callback(typeUrl);
+  var typeUrls = [];
+  var ret = [];
+
+  for(var type of types) {
+    //typeUrls.push(axios.get(type.type.url));
+    await axios.get(type.type.url)
+      .then(res => {
+        ret.push({
+          type: res.data.name,
+          damage_relations: res.data.damage_relations
+        });
+      })
+      .catch(err => callback(err));
+  }
+
+  callback(ret);
 }
 
 app.get("/:name", (req, res) =>{
