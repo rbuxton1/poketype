@@ -3,11 +3,9 @@ const app = express();
 const axios = require("axios");
 
 async function massage(types, callback) {
-  var typeUrls = [];
   var ret = [];
 
   for(var type of types) {
-    //typeUrls.push(axios.get(type.type.url));
     await axios.get(type.type.url)
       .then(res => {
         ret.push({
@@ -23,7 +21,6 @@ async function massage(types, callback) {
 
 app.get("/:name", (req, res) =>{
   var name = req.params.name;
-  var types;
 
   axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`)
     .then(response => {
