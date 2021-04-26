@@ -1,0 +1,23 @@
+{
+  "name": "poketype",
+  "version": "1.0.0",
+  "description": "Pokemon type advantages by name",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rbuxton1/poketype.git"
+  },
+  "author": "Ryan Buxton & Asia Keomanivong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rbuxton1/poketype/issues"
+  },
+  "homepage": "https://github.com/rbuxton1/poketype#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1"
+  }
+}
