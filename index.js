@@ -2,6 +2,13 @@ const express = require("express");
 const app = express();
 const axios = require("axios");
 
+app.set("view engine", "ejs");
+app.use(express.static("public"));
+
+app.get("/", (req, res) => {
+  res.render("index");
+});
+
 async function massage(types, callback) {
   var ret = [];
 
