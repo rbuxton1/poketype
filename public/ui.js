@@ -19,24 +19,24 @@ $(document).ready(() => {
         });
         type.damage_relations.half_damage_to.forEach((item, i) => {
           var tr = item.name + "<br>";
-          $("#doubleTo").append(tr);
+          $("#halfTo").append(tr);
         });
         type.damage_relations.no_damage_to.forEach((item, i) => {
           var tr = item.name + "<br>";
-          $("#doubleTo").append(tr);
+          $("#noneTo").append(tr);
         });
 
         type.damage_relations.double_damage_from.forEach((item, i) => {
           var tr = item.name + "<br>";
-          $("#doubleTo").append(tr);
+          $("#doubleFrom").append(tr);
         });
         type.damage_relations.half_damage_from.forEach((item, i) => {
           var tr = item.name + "<br>";
-          $("#doubleTo").append(tr);
+          $("#halfFrom").append(tr);
         });
         type.damage_relations.no_damage_from.forEach((item, i) => {
           var tr = item.name + "<br>";
-          $("#doubleTo").append(tr);
+          $("#noneFrom").append(tr);
         });
       });
 
